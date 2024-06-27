@@ -1,0 +1,119 @@
+/* IniciarSesion.css */
+.IniciarSesion-container {
+  background-image: url('../images/fondoinicio.png'); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+  color: white; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: flex-end;
+}
+
+.IniciarSesion-container h2 {
+  color: white;
+  text-align: left;
+  font-size: 28px; 
+  margin-bottom: 20px; 
+  margin-right: 300px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 100px; 
+  margin-bottom: 200px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos dentro del formulario */
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #f70404; /* Color rojo */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #ff0303; /* Color rojo más claro en hover */
+}
+
+.error-message {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .IniciarSesion-container {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .IniciarSesion-container h2 {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .login-form {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .IniciarSesion-container {
+    background-image: url('../images/mininicio.png'); /* Imagen para móviles */
+    padding: 10px;
+  }
+
+  .IniciarSesion-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .login-form {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

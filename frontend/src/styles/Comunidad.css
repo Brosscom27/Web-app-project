@@ -1,0 +1,61 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Previene cualquier desbordamiento */
+  background: black; /* O cualquier otro color o imagen de fondo que prefieras */
+}
+
+.image-gallery {
+  display: grid;
+  position: relative; /* Asegura la posición relativa para el z-index */
+  z-index: 1000; /* Alto z-index para estar sobre otros contenidos */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+  margin: 0; /* Elimina cualquier margen para cubrir completamente */
+  padding: 10px; /* Añade un poco de padding para dar espacio alrededor del mosaico */
+  width: 100vw; /* Ancho completo del viewport */
+  height: 100vh; /* Alto completo del viewport */
+  background-image: url('../images/negron.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Asegura que no se muestre contenido fuera de este contenedor */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+.image-gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery a.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.image-gallery a.medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-gallery a.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}

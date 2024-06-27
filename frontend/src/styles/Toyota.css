@@ -1,0 +1,78 @@
+.toyota-container {
+  display: flex;
+  flex-direction: column; /* Apilar verticalmente */
+  align-items: center; /* Alineación centrada */
+  justify-content: flex-start; /* Alinea contenido al inicio */
+  background: url('../images/audimm.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 200px; /* Añadir padding para evitar que el contenido se superponga con el encabezado */
+}
+
+.toyota-header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Asegura que esté sobre otros elementos */
+}
+
+.toyota-title {
+  margin: 0;
+  font-size: 3em; /* Tamaño grande para REVZOOM */
+  color: white;
+  letter-spacing: 2px;
+}
+
+.toyota-subtitle {
+  margin: 0;
+  font-size: 1.5em; /* Tamaño menor para TOYOTA */
+  color: white;
+  letter-spacing: 1px;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.car-box {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.car-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.car-title, .car-details {
+  margin-bottom: 10px;
+}
+
+.car-details {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+@media (max-width: 500px) {
+  .toyota-header {
+      padding-top: 50px; /* Añade espacio en la parte superior para evitar que el texto se sobreponga */
+  }
+}
